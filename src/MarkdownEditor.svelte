@@ -1,15 +1,21 @@
 <script>
-  import MarkdownText from "./MarkdownText.svelte";
-  import MarkdownPreview from "./MarkdownPreview.svelte";
+  import MarkdownText from './MarkdownText.svelte'
+  import MarkdownPreview from './MarkdownPreview.svelte'
+  import ClipboardButton from './ClipboardButton.svelte'
 </script>
 
 <main>
   <div class="editor">
-    <div class="pane">
-      <MarkdownText />
+    <div class="panes">
+      <div class="pane">
+        <MarkdownText />
+      </div>
+      <div class="pane">
+        <MarkdownPreview />
+      </div>
     </div>
-    <div class="pane">
-      <MarkdownPreview />
+    <div class="buttons">
+      <ClipboardButton />
     </div>
   </div>
 </main>
@@ -22,12 +28,15 @@
   }
 
   .editor {
-    display: flex;
     margin-top: 8%;
     width: 65%;
-    min-height: 50rem;
     box-shadow: 3px 5px 17px -2px rgba(0, 0, 0, 0.81);
     border-radius: 15px;
+  }
+
+  .panes {
+    display: flex;
+    min-height: 50rem;
   }
 
   .pane {
@@ -37,5 +46,12 @@
 
   .pane:last-child {
     border-left: 2px solid black;
+  }
+
+  .buttons {
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+    padding-right: 2%;
   }
 </style>
