@@ -1,8 +1,8 @@
 <script>
-  import MarkdownText from './MarkdownText.svelte'
-  import MarkdownPreview from './MarkdownPreview.svelte'
-  import ClipboardHTMLButton from './ClipboardHTMLButton.svelte'
-  import ClipboardMarkdownButton from './ClipboardMarkdownButton.svelte'
+  import MarkdownText from '../MarkdownText.svelte'
+  import MarkdownPreview from '../MarkdownPreview.svelte'
+  import ClipboardHTMLButton from '../ClipboardHTMLButton.svelte'
+  import ClipboardMarkdownButton from '../ClipboardMarkdownButton.svelte'
 </script>
 
 <main>

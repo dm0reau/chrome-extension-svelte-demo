@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { markdownTextStore } from './stores'
+  import { markdownTextStore } from '../stores'
 
   let value = '# Markdown editor'
   $: markdownTextStore.set(value)

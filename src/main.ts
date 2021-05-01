@@ -1,7 +1,7 @@
-import MarkdownEditor from "./MarkdownEditor.svelte";
+import MarkdownEditor from './components/MarkdownEditor.svelte'
 
 const markdownEditor = new MarkdownEditor({
   target: document.body,
-});
+})
 
-export default markdownEditor;
+export default markdownEditor
