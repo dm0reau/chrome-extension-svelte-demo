@@ -1,7 +1,8 @@
 <script>
   import MarkdownText from './MarkdownText.svelte'
   import MarkdownPreview from './MarkdownPreview.svelte'
-  import ClipboardButton from './ClipboardButton.svelte'
+  import ClipboardHTMLButton from './ClipboardHTMLButton.svelte'
+  import ClipboardMarkdownButton from './ClipboardMarkdownButton.svelte'
 </script>
 
 <main>
@@ -15,7 +16,8 @@
       </div>
     </div>
     <div class="buttons">
-      <ClipboardButton />
+      <ClipboardMarkdownButton />
+      <ClipboardHTMLButton />
     </div>
   </div>
 </main>
@@ -28,7 +30,7 @@
   }
 
   .editor {
-    margin-top: 8%;
+    margin-top: 2%;
     width: 65%;
     box-shadow: 3px 5px 17px -2px rgba(0, 0, 0, 0.81);
     border-radius: 15px;
