@@ -1,5 +1,7 @@
 <script lang="ts">
   import { convertedHtmlStore } from '../stores'
+  import Button from './Button.svelte'
+
   let html = ''
   convertedHtmlStore.subscribe((convertedHtml) => (html = convertedHtml))
 
@@ -9,4 +11,4 @@
   }
 </script>
 
-<button on:click={onClick}>Copy HTML to clipboard</button>
+<Button {onClick}>Copy HTML to clipboard</Button>

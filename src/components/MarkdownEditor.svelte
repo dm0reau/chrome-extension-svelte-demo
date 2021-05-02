@@ -24,13 +24,22 @@
 
 <style>
   main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
   .editor {
-    margin-top: 2%;
+    background-color: white;
+    margin-top: 5%;
     width: 65%;
     box-shadow: 3px 5px 17px -2px rgba(0, 0, 0, 0.81);
     border-radius: 15px;
@@ -52,8 +61,7 @@
 
   .buttons {
     display: flex;
-    align-items: flex-end;
-    justify-content: end;
+    justify-content: flex-end;
     padding-right: 2%;
   }
 </style>

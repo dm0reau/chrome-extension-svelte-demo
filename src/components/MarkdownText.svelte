@@ -9,11 +9,11 @@
 
 <style>
   textarea {
+    font-family: inherit;
+    font-size: inherit;
     resize: none;
     width: 100%;
     height: 100%;
     padding: 2%;
-    margin: 0 0 0.5em 0;
-    box-sizing: border-box;
   }
 </style>

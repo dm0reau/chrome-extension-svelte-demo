@@ -1,5 +1,7 @@
 <script lang="ts">
   import { markdownTextStore } from '../stores'
+  import Button from './Button.svelte'
+
   let markdown = ''
   markdownTextStore.subscribe((markdownText) => (markdown = markdownText))
 
@@ -9,11 +11,4 @@
   }
 </script>
 
-<button on:click={onClick}>Copy Markdown to clipboard</button>
-
-<style>
-  button {
-    margin-right: 1%;
-    margin-bottom: 1%;
-  }
-</style>
+<Button {onClick}>Copy Markdown to clipboard</Button>
