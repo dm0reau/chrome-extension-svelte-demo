@@ -10,3 +10,14 @@ markdownTextStore.subscribe((markdown) => {
   const html = converter.makeHtml(markdown)
   convertedHtmlStore.set(html)
 })
+
+if (chrome.runtime) {
+  chrome.runtime.onMessage.addListener((message, sender) => {
+    // Open the editor
+    if (!sender.tab && message === 'toggle') {
+      editorEnabledStore.update((enabled) => !enabled)
+    }
+  })
+} else {
+  console.warn('chrome.runtime doesnt exists. Are you in an extension context?')
+}

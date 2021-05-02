@@ -1,5 +1,16 @@
+<script lang="ts">
+  async function onClick() {
+    const tabs = await chrome.tabs.query({
+      active: true,
+      currentWindow: true,
+    })
+    const activeTab = tabs[0]
+    chrome.tabs.sendMessage(activeTab.id, 'toggle')
+  }
+</script>
+
 <main>
-  <button>Open editor</button>
+  <button on:click={onClick}>Toggle editor</button>
 </main>
 
 <style>
