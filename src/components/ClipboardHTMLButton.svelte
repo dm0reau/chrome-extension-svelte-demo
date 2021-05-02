@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { convertedHtmlStore } from '../stores'
+  import { convertedHtmlStore, editorEnabledStore } from '../stores'
   import Button from './Button.svelte'
 
   let html = ''
@@ -8,6 +8,7 @@
   function onClick() {
     alert('HTML copied to clipboard')
     navigator.clipboard.writeText(html)
+    editorEnabledStore.set(false)
   }
 </script>
 

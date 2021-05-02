@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { markdownTextStore } from '../stores'
+  import { editorEnabledStore, markdownTextStore } from '../stores'
   import Button from './Button.svelte'
 
   let markdown = ''
@@ -8,6 +8,7 @@
   function onClick() {
     alert('Markdown copied to clipboard')
     navigator.clipboard.writeText(markdown)
+    editorEnabledStore.set(false)
   }
 </script>
 

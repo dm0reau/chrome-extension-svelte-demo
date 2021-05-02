@@ -1,6 +1,7 @@
 import { Converter } from 'showdown'
 import { writable } from 'svelte/store'
 
+export const editorEnabledStore = writable(!Boolean(chrome.runtime))
 export const markdownTextStore = writable('')
 export const convertedHtmlStore = writable('')
 

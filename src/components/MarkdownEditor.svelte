@@ -3,24 +3,30 @@
   import MarkdownPreview from './MarkdownPreview.svelte'
   import ClipboardHTMLButton from './ClipboardHTMLButton.svelte'
   import ClipboardMarkdownButton from './ClipboardMarkdownButton.svelte'
+  import { editorEnabledStore } from '../stores'
+
+  let editorEnabled = false
+  editorEnabledStore.subscribe((enabled) => (editorEnabled = enabled))
 </script>
 
-<main>
-  <div class="editor">
-    <div class="panes">
-      <div class="pane">
-        <MarkdownText />
+{#if editorEnabled}
+  <main>
+    <div class="editor">
+      <div class="panes">
+        <div class="pane">
+          <MarkdownText />
+        </div>
+        <div class="pane">
+          <MarkdownPreview />
+        </div>
       </div>
-      <div class="pane">
-        <MarkdownPreview />
+      <div class="buttons">
+        <ClipboardMarkdownButton />
+        <ClipboardHTMLButton />
       </div>
     </div>
-    <div class="buttons">
-      <ClipboardMarkdownButton />
-      <ClipboardHTMLButton />
-    </div>
-  </div>
-</main>
+  </main>
+{/if}
 
 <style>
   main {
