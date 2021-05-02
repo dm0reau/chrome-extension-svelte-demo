@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { convertedHtmlStore } from './stores'
+  import { convertedHtmlStore } from '../stores'
   let html = ''
   convertedHtmlStore.subscribe((convertedHtml) => (html = convertedHtml))
 

@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { markdownTextStore } from './stores'
+  import { markdownTextStore } from '../stores'
   let markdown = ''
   markdownTextStore.subscribe((markdownText) => (markdown = markdownText))
 
@@ -14,5 +14,6 @@
 <style>
   button {
     margin-right: 1%;
+    margin-bottom: 1%;
   }
 </style>
