@@ -28,6 +28,7 @@
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 999;
 
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
       Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;

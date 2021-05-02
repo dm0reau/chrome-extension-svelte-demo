@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Markdown editor",
+  "description": "Edit and copy/paste your text in markdown or HTML format",
+  "version": "1.0.0",
+  "permissions": [],
+  "icons": {
+    "128": "./favicon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "all_frames": true,
+      "js": ["build/bundle.js"],
+      "css": ["build/bundle.css"]
+    }
+  ]
+}
