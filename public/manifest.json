@@ -11,8 +11,11 @@
     {
       "matches": ["https://*/*"],
       "all_frames": true,
-      "js": ["build/bundle.js"],
-      "css": ["build/bundle.css"]
+      "js": ["build/editor.js"],
+      "css": ["build/editor.css"]
     }
-  ]
+  ],
+  "action": {
+    "default_popup": "extension-popup.html"
+  }
 }
